@@ -28,6 +28,7 @@
       <sprite>sprites\spr_circle_blade</sprite>
       <sprite>sprites\spr_circle_elemental</sprite>
       <sprite>sprites\spr_circle_weapon</sprite>
+      <sprite>sprites\spr_circle</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -37,6 +38,7 @@
       <script>scripts\get_color_level.gml</script>
       <script>scripts\card_draw_hero.gml</script>
       <script>scripts\card_draw_weapon.gml</script>
+      <script>scripts\card_draw_weapon_parent.gml</script>
     </scripts>
     <scripts name="Extenders">
       <script>scripts\draw_text_rtf.gml</script>
@@ -67,6 +69,7 @@
           <object>objects\obj_card_weapon_trustytorch</object>
         </objects>
       </objects>
+      <object>objects\obj_weapon_symbol</object>
     </objects>
   </objects>
   <rooms name="rooms">
