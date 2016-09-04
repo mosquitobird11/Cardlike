@@ -5,9 +5,73 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Cards">
+      <sprite>sprites\spr_card_base</sprite>
+      <sprites name="hero">
+        <sprites name="human">
+          <sprite>sprites\spr_card_hero_explorer</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="weapon">
+        <sprites name="blades">
+          <sprite>sprites\spr_card_weapon_explorersblade</sprite>
+        </sprites>
+        <sprites name="elemental">
+          <sprite>sprites\spr_card_weapon_trustytorch</sprite>
+        </sprites>
+      </sprites>
+    </sprites>
+    <sprites name="Card_circles">
+      <sprite>sprites\spr_circle_human</sprite>
+      <sprite>sprites\spr_circle_hero</sprite>
+      <sprite>sprites\spr_circle_blade</sprite>
+      <sprite>sprites\spr_circle_elemental</sprite>
+      <sprite>sprites\spr_circle_weapon</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Card_drawing">
+      <script>scripts\get_color_level.gml</script>
+      <script>scripts\card_draw_hero.gml</script>
+      <script>scripts\card_draw_weapon.gml</script>
+    </scripts>
+    <scripts name="Extenders">
+      <script>scripts\draw_text_rtf.gml</script>
+    </scripts>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_delius</font>
+    <font>fonts\font_delius_b</font>
+    <font>fonts\font_delius_bi</font>
+    <font>fonts\font_delius_i</font>
+    <font>fonts\font_delius_large</font>
+    <font>fonts\font_kav_large</font>
+    <font>fonts\font_kav_b</font>
+  </fonts>
+  <objects name="objects">
+    <objects name="cards">
+      <object>objects\obj_card</object>
+      <objects name="hero">
+        <objects name="human">
+          <object>objects\obj_card_hero_explorer</object>
+        </objects>
+      </objects>
+      <objects name="Weapon">
+        <objects name="blades">
+          <object>objects\obj_card_weapon_explorersblade</object>
+        </objects>
+        <objects name="elemental">
+          <object>objects\obj_card_weapon_trustytorch</object>
+        </objects>
+      </objects>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
