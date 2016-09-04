@@ -25,13 +25,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//The weapon instance that this symbol refers to
+            <string>//_____THESE GET SET BY THE CALLING CARD_______
+
+//The weapon instance that this symbol refers to
 weapon = "";
+//The card that this is attached to
+owner = "";
+//used to move with parent card
+offsetX = 0;
+offsetY = 0;
+
+//_______________________________________________
 
 //used for drawing
 opa = 0.5;
 target_opa = 0.5
 brighten = 0;
+
 
 </string>
           </argument>

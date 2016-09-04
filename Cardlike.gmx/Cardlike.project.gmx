@@ -30,6 +30,9 @@
       <sprite>sprites\spr_circle_weapon</sprite>
       <sprite>sprites\spr_circle</sprite>
     </sprites>
+    <sprites name="Board">
+      <sprite>sprites\spr_slot</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -43,6 +46,8 @@
     <scripts name="Extenders">
       <script>scripts\draw_text_rtf.gml</script>
     </scripts>
+    <script>scripts\move_card_to_target.gml</script>
+    <script>scripts\move_card_to_mouse.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_delius</font>
@@ -70,6 +75,9 @@
         </objects>
       </objects>
       <object>objects\obj_weapon_symbol</object>
+    </objects>
+    <objects name="board">
+      <object>objects\obj_slot</object>
     </objects>
   </objects>
   <rooms name="rooms">
