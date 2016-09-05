@@ -20,6 +20,14 @@
         <sprites name="elemental">
           <sprite>sprites\spr_card_weapon_trustytorch</sprite>
         </sprites>
+        <sprites name="organic">
+          <sprite>sprites\spr_card_weapon_venomfang</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="creature">
+        <sprites name="bug">
+          <sprite>sprites\spr_card_creature_hatchling</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="Card_circles">
@@ -29,6 +37,9 @@
       <sprite>sprites\spr_circle_elemental</sprite>
       <sprite>sprites\spr_circle_weapon</sprite>
       <sprite>sprites\spr_circle</sprite>
+      <sprite>sprites\spr_circle_organic</sprite>
+      <sprite>sprites\spr_circle_bug</sprite>
+      <sprite>sprites\spr_circle_creature</sprite>
     </sprites>
     <sprites name="Board">
       <sprite>sprites\spr_slot</sprite>
@@ -40,6 +51,7 @@
     <scripts name="Card_drawing">
       <script>scripts\get_color_level.gml</script>
       <script>scripts\card_draw_hero.gml</script>
+      <script>scripts\card_draw_creature.gml</script>
       <script>scripts\card_draw_weapon.gml</script>
       <script>scripts\card_draw_weapon_parent.gml</script>
     </scripts>
@@ -59,13 +71,22 @@
     <font>fonts\font_kav_b</font>
   </fonts>
   <objects name="objects">
+    <objects name="board">
+      <object>objects\obj_slot</object>
+    </objects>
     <objects name="cards">
-      <object>objects\obj_card</object>
+      <objects name="creature">
+        <objects name="bug">
+          <object>objects\obj_card_creature_hatchling</object>
+        </objects>
+      </objects>
       <objects name="hero">
         <objects name="human">
           <object>objects\obj_card_hero_explorer</object>
         </objects>
       </objects>
+      <object>objects\obj_card</object>
+      <object>objects\obj_weapon_symbol</object>
       <objects name="Weapon">
         <objects name="blades">
           <object>objects\obj_card_weapon_explorersblade</object>
@@ -73,11 +94,10 @@
         <objects name="elemental">
           <object>objects\obj_card_weapon_trustytorch</object>
         </objects>
+        <objects name="organic">
+          <object>objects\obj_card_weapon_venomfang</object>
+        </objects>
       </objects>
-      <object>objects\obj_weapon_symbol</object>
-    </objects>
-    <objects name="board">
-      <object>objects\obj_slot</object>
     </objects>
   </objects>
   <rooms name="rooms">
