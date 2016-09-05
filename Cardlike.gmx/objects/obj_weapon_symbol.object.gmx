@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//_____THESE GET SET BY THE CALLING CARD_______
+            <string>///set vars
+//_____THESE GET SET BY THE CALLING CARD_______
 
 //The weapon instance that this symbol refers to
 weapon = "";
@@ -66,7 +67,8 @@ showHover = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ( (opa &lt; 1 &amp;&amp; brighten &gt; 0) || (opa &gt; target_opa &amp;&amp; brighten &lt; 0)){
+            <string>///adjust brightness
+if ( (opa &lt; 1 &amp;&amp; brighten &gt; 0) || (opa &gt; target_opa &amp;&amp; brighten &lt; 0)){
     opa += brighten;
 }
 </string>
@@ -91,7 +93,8 @@ showHover = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>brighten = -0.1;
+            <string>///adjust opacity and visibility
+brighten = -0.1;
 
 weapon.visible = false;
 weapon.opa = 0.2;
@@ -161,7 +164,8 @@ weapon.opatarget = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>brighten = 0.1;
+            <string>///Adjust opacity and visibility
+brighten = 0.1;
 
 
 weapon.visible = true;
@@ -204,7 +208,9 @@ weapon.opatarget = 0.2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (weapon != ""){
+            <string>///Draw the asset that corresponds to the weapon's tribe
+
+if (weapon != ""){
     var tr = asset_get_index("spr_circle_"+weapon.rtribe);
     draw_sprite_ext(tr,0,x,y,1,1,0,-1,opa);
 }

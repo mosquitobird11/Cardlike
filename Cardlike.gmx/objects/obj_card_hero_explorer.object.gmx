@@ -39,7 +39,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Define Card Variables
+            <string>///Define Card
+//Define Card Variables
 name = "The Explorer";
 rname = "explorer";
 type = "Hero";
@@ -59,19 +60,14 @@ card_text = " [b]Ability[/b]: Draw a card. # [b]Explorer's Insight[/b]: Reveal #
 weapons[0] = instance_create(x,y,obj_card_weapon_explorersblade);
 weapons[1] = instance_create(x,y,obj_card_weapon_trustytorch);
 
-//Make sure weapon cards don't draw and are assigned to current 
-weapons[0].visible = false;
-weapons[0].assigned = true;
-weapons[0].parent_card = id;
-weapons[0].depth = -100;
-
-weapons[1].visible = false;
-weapons[1].assigned = true;
-weapons[1].parent_card = id;
-weapons[1].depth = -100;
-
 //create weapon symbols
 for (var i = 0; i &lt; array_length_1d(weapons); i ++){
+//Make sure weapon cards don't draw and are assigned to current 
+    weapons[i].visible = false;
+    weapons[i].assigned = true;
+    weapons[i].parent_card = id;
+    weapons[i].depth = -100;
+    //create weapon symbols
     weapons_symbol[i] = instance_create(x+150,y+50+25*i,obj_weapon_symbol);
     weapons_symbol[i].weapon = weapons[i];
     weapons_symbol[i].owner = self;

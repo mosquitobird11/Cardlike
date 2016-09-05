@@ -20,6 +20,7 @@ if (point_distance(x,y,targetX,targetY) > CARD_SPEED_LIMIT){
     y = targetY;
     //depth changes when moving to make sure it doesn't go "underneath" things as it slides
     depth = 0;
+    moving = "none";
 }
 
 //jump any weapon symbols with the card

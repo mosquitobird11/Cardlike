@@ -39,7 +39,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Define Card Variables
+            <string>///Define Card
+//Define Card Variables
 name = "Venom Fang";
 rname = "venomfang";
 type = "Weapon";
