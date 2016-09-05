@@ -33,6 +33,7 @@ draw_sprite(tr,0,xpos+151,ypos+2);
 draw_set_halign(fa_center);
 
 //Write Tribe and Type
+draw_set_color(c_black);
 draw_set_font(font_delius);
 draw_text(xpos+54,ypos+6,type);
 draw_text(xpos+119,ypos+6,tribe);

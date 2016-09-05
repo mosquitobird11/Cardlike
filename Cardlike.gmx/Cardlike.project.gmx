@@ -54,12 +54,17 @@
       <script>scripts\card_draw_creature.gml</script>
       <script>scripts\card_draw_weapon.gml</script>
       <script>scripts\card_draw_weapon_parent.gml</script>
+      <script>scripts\card_draw_shadow.gml</script>
+      <script>scripts\card_draw_border.gml</script>
     </scripts>
     <scripts name="Extenders">
       <script>scripts\draw_text_rtf.gml</script>
     </scripts>
-    <script>scripts\move_card_to_target.gml</script>
-    <script>scripts\move_card_to_mouse.gml</script>
+    <scripts name="Card_logic">
+      <script>scripts\move_card_to_target.gml</script>
+      <script>scripts\move_card_to_mouse.gml</script>
+      <script>scripts\mouse_in_pickup_boundary.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_delius</font>

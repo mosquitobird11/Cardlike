@@ -25,8 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Moving speed limit
-CARD_SPEED_LIMIT = 25
+            <string>///Init card
+//Moving speed limit
+CARD_SPEED_LIMIT = 25*60/room_speed
+//pixels on the outside of card where user cannot pickup card
+CARD_BORDER_NO_PICKUP = 26;
 weapons_symbol = 0;
 
 //Shared variables for compatibility
@@ -42,6 +45,9 @@ moving = "none";
 //used to move the card relative to where the mouse was held down
 mOffsetX = 0;
 mOffsetY = 0;
+
+//used for drawing effects
+border_type = "none"
 </string>
           </argument>
         </arguments>
@@ -70,6 +76,35 @@ if (moving == "target"){
 }else if (moving == "mouse"){
     move_card_to_mouse();
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Decide if pickup highlighting
+if (mouse_in_pickup_boundary()){
+    if (moving == "none"){
+        border_type = "pickup";
+    }
+}else{
+    border_type = "none";
+}
+
 </string>
           </argument>
         </arguments>
@@ -153,14 +188,18 @@ if (!assigned){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Follow mouse
+            <string>///Follow mouse if correctly picking up
 //only pickup stationary cards
 //!!!!!IMPORTANT DONT REMOVE THIS BECAUSE IT ALLOWES YOU TO 'STACK' CARDS
 if (x == targetX &amp;&amp; y == targetY){
-    if (!assigned){ //make sure the card is not a subcard
-        moving = "mouse";
-        mOffsetX = mouse_x-x;
-        mOffsetY = mouse_y-y;
+    //Only allow the user to grab the middle of the card, because the outside contains 
+    //different interactivity (weapons etc.)
+    if (mouse_in_pickup_boundary()){
+        if (!assigned){ //make sure the card is not a subcard
+            moving = "mouse";
+            mOffsetX = mouse_x-x;
+            mOffsetY = mouse_y-y;
+        }
     }
 }
 </string>

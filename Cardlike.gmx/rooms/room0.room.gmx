@@ -6,7 +6,7 @@
   <vsnap>25</vsnap>
   <hsnap>25</hsnap>
   <isometric>0</isometric>
-  <speed>60</speed>
+  <speed>140</speed>
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
@@ -51,7 +51,7 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_card_hero_explorer" x="475" y="825" name="inst_9142C2E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_card_hero_explorer" x="1500" y="550" name="inst_9142C2E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slot" x="475" y="550" name="inst_AFEF4228" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slot" x="475" y="275" name="inst_CE413EA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slot" x="675" y="275" name="inst_98F765E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -66,6 +66,7 @@
     <instance objName="obj_card_creature_hatchling" x="875" y="825" name="inst_63EF110A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_card_creature_hatchling" x="1075" y="825" name="inst_C63BDEE8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_card_creature_hatchling" x="1275" y="825" name="inst_F7D894CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_card_creature_hatchling" x="475" y="825" name="inst_74551610" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

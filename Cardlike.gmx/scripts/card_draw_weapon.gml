@@ -1,3 +1,9 @@
+//Draw Border
+card_draw_border();
+//Draw shadow if moving
+if (moving != "none"){
+    card_draw_shadow();
+}
 
 //draw base case
 draw_sprite(sprite_index, 0, x, y);
@@ -16,6 +22,7 @@ draw_sprite(tr,0,x+151,y+2);
 draw_set_halign(fa_center);
 
 //Write Tribe and Type
+draw_set_color(c_black);
 draw_set_font(font_delius);
 draw_text(x+54,y+6,type);
 draw_text(x+119,y+6,tribe);
